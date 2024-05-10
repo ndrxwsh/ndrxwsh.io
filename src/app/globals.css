@@ -2,32 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/gray-dark.css";
+@import "@radix-ui/colors/gray-alpha.css";
+@import "@radix-ui/colors/gray-dark-alpha.css";
 
-@media (prefers-color-scheme: dark) {
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blue-dark.css";
+@import "@radix-ui/colors/blue-alpha.css";
+@import "@radix-ui/colors/blue-dark-alpha.css";
+
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --bg: var(--gray-1);
+    --boxBg: var(--gray-4);
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .light {
+    --contrast-color: #fff;
+    .prose {
+      --tw-prose-headings: var(--gray-12);
+      --tw-prose-body: var(--gray-12);
+      --tw-prose-bold: var(--gray-12);
+      --tw-prose-links: var(--blue-11);
+      --tw-prose-code: var(--gray-12);
+      --tw-prose-quotes: var(--gray-12);
+    }
+  }
+
+  .dark {
+    --contrast-color: #0a0a0a;
+    .prose {
+      --tw-prose-headings: var(--gray-12);
+      --tw-prose-body: var(--gray-11);
+      --tw-prose-bold: var(--gray-11);
+      --tw-prose-links: var(--blue-11);
+      --tw-prose-code: var(--gray-11);
+      --tw-prose-quotes: var(--gray-11);
+    }
+  }
+
+  .main-header {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--bg);
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* Mapbox */
+.mapboxgl-control-container {
+  display: none;
+}
+
+.map-marker {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--blue-10);
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.95);
 }
