@@ -1,18 +1,22 @@
 import clsx from 'clsx';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 
-import Navigation from '~/components/Navigation'
-import { ThemeProvider } from '~/components/ThemeProvider'
 
-import './globals.css'
+
+import Navigation from '~/components/Navigation';
+import { ThemeProvider } from '~/components/ThemeProvider';
+
+
+
+import './globals.css';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'andrxw66',
-  description:
-    'Kazan-based Software Engineer, sharing insights on well-designed products and technology advancements.'
+  description: 'Kazan-based Software Engineer.'
 }
 
 export default function RootLayout({
