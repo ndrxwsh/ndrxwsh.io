@@ -43,5 +43,5 @@ export default function Map({ lng, lat, zoom = 2.5, pitch = 25, time = null }) {
     })
   })
 
-  return <div ref={mapContainer} className='min-h-[300px] min-w-[300px]' />
+  return <div ref={mapContainer} className='map-container h-full w-full' />
 }

@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/20/solid'
@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 import { Fragment } from 'react'
 
 import ThemeSwitcher from './ThemeSwitcher'
-import NavLink from './ui/NavLink'
+import { NavLink } from './ui'
 
 const links = [
   { label: 'About', href: '/about' },
@@ -23,7 +23,7 @@ export default function Navigation() {
   return (
     <header className='md:mt-6'>
       <nav className='mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6'>
-        <Link href={'/'} className='text-primary shrink-0'>
+        <Link href={'/'} className='shrink-0 text-primary'>
           <Image
             className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
             src='/66.svg'
@@ -44,8 +44,8 @@ export default function Navigation() {
           <ThemeSwitcher />
         </div>
         <Popover className='relative md:hidden'>
-          <PopoverButton className='text-secondary flex h-8 w-8 items-center justify-center rounded-lg'>
-            <Bars3Icon className='text-secondary hover:text-primary h-5 w-5 cursor-pointer transition-colors' />
+          <PopoverButton className='flex h-8 w-8 items-center justify-center rounded-lg text-secondary'>
+            <Bars3Icon className='h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary' />
           </PopoverButton>
           <Transition
             as={Fragment}
@@ -56,14 +56,14 @@ export default function Navigation() {
             leaveFrom='opacity-100 translate-y-0'
             leaveTo='opacity-0 translate-y-1'
           >
-            <PopoverPanel className='bg-contrast absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl p-2 text-base shadow-md focus:outline-none sm:text-sm'>
+            <PopoverPanel className='absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm'>
               <div className='grid'>
                 {links.map(link => (
                   <Link
                     key={link.href}
                     href={link.href}
                     className={clsx(
-                      'hover:text-primary rounded-md px-4 py-2 transition-colors',
+                      'rounded-md px-4 py-2 transition-colors hover:text-primary',
                       pathname === link.href ? 'bg-secondary font-medium' : 'font-normal'
                     )}
                   >

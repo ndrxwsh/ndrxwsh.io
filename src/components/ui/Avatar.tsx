@@ -1,7 +1,8 @@
-import clsx from 'clsx'
-import Image, { StaticImageData } from 'next/image'
+import clsx from 'clsx';
+import Image, { StaticImageData } from 'next/image';
 
-export default function Avatar({
+
+export const Avatar = ({
   src,
   alt,
   initials,
@@ -11,16 +12,16 @@ export default function Avatar({
   alt?: string
   initials?: string | null
   size?: 'sm' | 'md' | 'lg'
-}) {
+}) => {
   initials = initials?.slice(0, 2)
 
   return (
     <div
       className={clsx(
-        'text-primary relative inline-flex select-none items-center justify-center overflow-hidden rounded-full align-middle font-medium uppercase',
-        size === 'sm' && 'bg-tertiary h-10 w-10 text-sm',
-        size === 'md' && 'bg-tertiary h-14 w-14 text-base',
-        size === 'lg' && 'bg-secondary h-24 w-24 text-2xl'
+        'relative inline-flex select-none items-center justify-center overflow-hidden rounded-full align-middle font-medium uppercase text-primary',
+        size === 'sm' && 'h-10 w-10 bg-tertiary text-sm',
+        size === 'md' && 'h-14 w-14 bg-tertiary text-base',
+        size === 'lg' && 'h-24 w-24 bg-secondary text-2xl'
       )}
     >
       {!src || src === '' ? (

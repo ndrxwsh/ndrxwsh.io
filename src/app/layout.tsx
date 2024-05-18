@@ -1,16 +1,11 @@
-import clsx from 'clsx';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import clsx from 'clsx'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
+import Navigation from '~/components/Navigation'
+import { ThemeProvider } from '~/components/ThemeProvider'
 
-
-import Navigation from '~/components/Navigation';
-import { ThemeProvider } from '~/components/ThemeProvider';
-
-
-
-import './globals.css';
-
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,7 +24,7 @@ export default function RootLayout({
       <body
         className={clsx(
           inter.className,
-          'width-full text-primary bg-white antialiased dark:bg-black'
+          'width-full bg-white text-primary antialiased dark:bg-black'
         )}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
