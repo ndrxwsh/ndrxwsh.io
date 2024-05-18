@@ -6,11 +6,9 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Fragment } from 'react';
+import { Fragment } from 'react'
 
-
-
-import ThemeSwitcher from './ThemeSwitcher';
+import { ThemeSwitcher } from './ThemeSwitcher';
 import { NavLink } from './ui';
 
 
