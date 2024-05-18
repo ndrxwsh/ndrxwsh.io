@@ -1,15 +1,18 @@
-'use client'
+'use client';
 
-import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
-import { Bars3Icon } from '@heroicons/react/20/solid'
-import clsx from 'clsx'
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Fragment } from 'react'
+import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react';
+import { Bars3Icon } from '@heroicons/react/20/solid';
+import clsx from 'clsx';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Fragment } from 'react';
 
-import ThemeSwitcher from './ThemeSwitcher'
-import { NavLink } from './ui'
+
+
+import ThemeSwitcher from './ThemeSwitcher';
+import { NavLink } from './ui';
+
 
 const links = [
   { label: 'About', href: '/about' },
@@ -17,7 +20,7 @@ const links = [
   { label: 'Gear', href: '/gear' }
 ]
 
-export default function Navigation() {
+export const Navigation = () => {
   const pathname = `/${usePathname().split('/')[1]}`
 
   return (
