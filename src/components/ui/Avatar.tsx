@@ -27,7 +27,7 @@ export const Avatar = ({
       {!src || src === '' ? (
         <div>{initials || ''}</div>
       ) : (
-        <Image src={src} alt={alt || ''} fill sizes='80px' />
+        <Image src={src} alt={alt || ''} sizes='80px' />
       )}
     </div>
   )
