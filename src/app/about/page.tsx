@@ -4,13 +4,14 @@ import { ReactNode } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 
+import Gallery from '~/components/Gallery'
 import Places from '~/components/Places'
 import { Link, Section } from '~/components/ui'
 
 import kgeuLogo from '../../../public/education/kgeu.png'
-import first from '../../../public/gallery/2.jpg'
-import second from '../../../public/gallery/3.jpg'
-import third from '../../../public/gallery/me.jpg'
+import graduation from '../../../public/gallery/graduation.jpg'
+import meAfterGame from '../../../public/gallery/me-after-game.jpg'
+import onQuay from '../../../public/gallery/on-quay.jpg'
 import mageinnLogo from '../../../public/work/mageinn.png'
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function About() {
       <div className='mb-8 md:hidden'>
         <div className='animate-in' style={{ '--index': 1 } as React.CSSProperties}>
           <Image
-            src={first}
+            src={meAfterGame}
             alt={'me'}
             width={324}
             height={139}
@@ -41,7 +42,7 @@ export default function About() {
 
         <div className='animate-in' style={{ '--index': 2 } as React.CSSProperties}>
           <Image
-            src={second}
+            src={graduation}
             alt={'me'}
             width={180}
             height={200}
@@ -52,7 +53,7 @@ export default function About() {
 
         <div className='animate-in' style={{ '--index': 2 } as React.CSSProperties}>
           <Image
-            src={third}
+            src={onQuay}
             alt={'me'}
             width={180}
             height={200}
@@ -61,7 +62,9 @@ export default function About() {
           />
         </div>
       </div>
-      <div className='hidden md:block'>{/* <Gallery /> */}</div>
+      <div className='hidden md:block'>
+        <Gallery />
+      </div>
       <div
         className='flex animate-in flex-col gap-16 md:gap-24'
         style={{ '--index': 3 } as React.CSSProperties}
@@ -136,7 +139,7 @@ const workplaces = [
   {
     title: 'Full Stack Engineer',
     company: 'Mageinn',
-    time: '2022 -',
+    time: '2021 -',
     imageSrc: mageinnLogo,
     link: 'https://hines.com'
   }
