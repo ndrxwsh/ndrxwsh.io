@@ -78,17 +78,18 @@ export default function About() {
               full-stack web development.
             </p>
             <p>
-              When I&apos;m not at my desk, I am probably lifting weights, playing soccer or hockey.
+              When I&apos;m not at my desk, I am probably lifting weights, playing soccer or hockey,
+              filming something interesting.
             </p>
           </div>
         </Section>
         <Section heading='Connect' headingAlignment='left'>
           <ul className='animated-list grid flex-grow grid-cols-1 gap-3 md:grid-cols-2'>
             {connectLinks.map(link => (
-              <li className='col-span-1 transition-opacity' key={link.label}>
+              <li className='col-span-1' key={link.label}>
                 <Link
                   href={link.href}
-                  className='inline-grid w-full rounded-lg bg-secondary p-4 no-underline transition-opacity '
+                  className='inline-grid w-full rounded-lg bg-secondary p-4 no-underline '
                 >
                   <div className='flex items-center gap-3'>
                     <span className='text-xl'>{link.icon}</span>
@@ -141,7 +142,7 @@ const workplaces = [
     company: 'Mageinn',
     time: '2021 -',
     imageSrc: mageinnLogo,
-    link: 'https://hines.com'
+    link: 'https://mageinn.com/'
   }
 ]
 
@@ -169,7 +170,7 @@ const connectLinks: ConnectLink[] = [
   },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/andrxw66/',
+    href: 'https://www.instagram.com/andrxwvision/',
     icon: <FaInstagram />
   },
   {

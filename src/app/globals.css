@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@radix-ui/colors/gray.css";
-@import "@radix-ui/colors/gray-dark.css";
-@import "@radix-ui/colors/gray-alpha.css";
-@import "@radix-ui/colors/gray-dark-alpha.css";
+@import '@radix-ui/colors/gray.css';
+@import '@radix-ui/colors/gray-dark.css';
+@import '@radix-ui/colors/gray-alpha.css';
+@import '@radix-ui/colors/gray-dark-alpha.css';
 
-@import "@radix-ui/colors/blue.css";
-@import "@radix-ui/colors/blue-dark.css";
-@import "@radix-ui/colors/blue-alpha.css";
-@import "@radix-ui/colors/blue-dark-alpha.css";
+@import '@radix-ui/colors/blue.css';
+@import '@radix-ui/colors/blue-dark.css';
+@import '@radix-ui/colors/blue-alpha.css';
+@import '@radix-ui/colors/blue-dark-alpha.css';
 
 @layer base {
   :root {
@@ -77,4 +77,17 @@
   background-color: var(--blue-10);
   transform: translate(-50%, -50%);
   border: 3px solid rgba(255, 255, 255, 0.95);
+}
+
+.animated-list:hover li {
+  opacity: 0.5;
+}
+
+.animated-list li:hover {
+  opacity: 1;
+}
+
+.animated-list li {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }

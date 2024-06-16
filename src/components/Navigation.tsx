@@ -1,16 +1,15 @@
-'use client';
+'use client'
 
-import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react';
-import { Bars3Icon } from '@heroicons/react/20/solid';
-import clsx from 'clsx';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { CloseButton, Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
+import { Bars3Icon } from '@heroicons/react/20/solid'
+import clsx from 'clsx'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { Fragment } from 'react'
 
-import { ThemeSwitcher } from './ThemeSwitcher';
-import { NavLink } from './ui';
-
+import { ThemeSwitcher } from './ThemeSwitcher'
+import { NavLink } from './ui'
 
 const links = [
   { label: 'About', href: '/about' },
@@ -20,6 +19,12 @@ const links = [
 
 export const Navigation = () => {
   const pathname = `/${usePathname().split('/')[1]}`
+
+  const router = useRouter()
+
+  const handleNavigate = (href: string) => {
+    router.push(href)
+  }
 
   return (
     <header className='md:mt-6'>
@@ -60,16 +65,16 @@ export const Navigation = () => {
             <PopoverPanel className='absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm'>
               <div className='grid'>
                 {links.map(link => (
-                  <Link
+                  <CloseButton
                     key={link.href}
-                    href={link.href}
+                    onClick={() => handleNavigate(link.href)}
                     className={clsx(
                       'rounded-md px-4 py-2 transition-colors hover:text-primary',
                       pathname === link.href ? 'bg-secondary font-medium' : 'font-normal'
                     )}
                   >
                     {link.label}
-                  </Link>
+                  </CloseButton>
                 ))}
               </div>
             </PopoverPanel>
