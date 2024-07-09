@@ -165,27 +165,27 @@ interface ConnectLink {
 const connectLinks: ConnectLink[] = [
   {
     label: 'Telegram',
-    href: 'https://t.me/andrxw66',
+    href: 'https://t.me/ndrxwsh',
     icon: <FaTelegram />
   },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/andrxwvision/',
+    href: 'https://www.instagram.com/ndrxwsh/',
     icon: <FaInstagram />
   },
   {
     label: 'Twitter',
-    href: 'https://twitter.com/_andrxw66',
+    href: 'https://twitter.com/ndrxwsh',
     icon: <FaXTwitter />
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/andrxw66/',
+    href: 'https://www.linkedin.com/in/ndrxwsh/',
     icon: <FaLinkedin />
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/andrxw66',
+    href: 'https://github.com/ndrxwsh',
     icon: <FaGithub />
   }
 ]
