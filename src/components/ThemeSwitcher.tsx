@@ -1,9 +1,9 @@
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
-import { CheckIcon, MoonIcon } from '@heroicons/react/20/solid';
-import { SunIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
+import { CheckIcon, MoonIcon } from '@heroicons/react/20/solid'
+import { SunIcon } from '@heroicons/react/24/outline'
+import clsx from 'clsx'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 export const ThemeSwitcher = () => {

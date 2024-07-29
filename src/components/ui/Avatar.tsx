@@ -1,6 +1,5 @@
-import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
-
+import clsx from 'clsx'
+import Image, { StaticImageData } from 'next/image'
 
 export const Avatar = ({
   src,
