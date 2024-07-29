@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '404 | andrxw66',
+  title: '404 | ndrxwsh',
   description: 'Uh oh! This page does not exist'
 }
 

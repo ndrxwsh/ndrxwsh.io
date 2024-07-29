@@ -5,7 +5,7 @@ import { GearItem } from '~/components/GearItem'
 import { gear } from '~/utils/constants'
 
 export const metadata: Metadata = {
-  title: 'Gear | andrxw66',
+  title: 'Gear | ndrxwsh',
   description: 'My toolbox. This is gear I actually own and recommend.'
 }
 

@@ -15,7 +15,7 @@ import onQuay from '../../../public/gallery/on-quay.jpg'
 import mageinnLogo from '../../../public/work/mageinn.png'
 
 export const metadata: Metadata = {
-  title: 'About | andrxw66',
+  title: 'About | ndrxwsh',
   description: 'Kazan-based Software Engineer'
 }
 

@@ -9,14 +9,14 @@ export default function Telegram() {
       <div className='flex aspect-square h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-bl from-[#000] to-[#000]'>
         <FaTelegram className='text-2xl text-white' />
       </div>
-      <p className='text-secondary'>@andrxw66</p>
+      <p className='text-secondary'>@ndrxwsh</p>
       <p className='line-clamp-2'>Contact me</p>
 
       <Link
         className='mt-auto flex w-fit items-center gap-1.5 rounded-full bg-tertiary px-4 py-1.5 text-sm no-underline'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://t.me/andrxw66'
+        href='https://t.me/ndrxwsh'
       >
         <span className='font-medium text-primary'>Message</span>
       </Link>
