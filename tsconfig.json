@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/hooks/useMousePosition.ts"
+    "src/hooks/useMousePosition.ts",
+    "src/app/metrika.js"
   ],
   "exclude": ["node_modules"]
 }
