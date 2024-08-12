@@ -36,6 +36,8 @@ export const CardPlace = ({ title, company, imageSrc, time, link }: CardPlacePro
       {link ? (
         <Link
           href={link}
+          target='_blank'
+          rel='noopener noreferrer'
           className='-mx-3 -my-2 flex w-full justify-between px-3 py-2 no-underline'
         >
           {content}

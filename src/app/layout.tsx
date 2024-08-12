@@ -36,13 +36,6 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-        <div>
-          <Image
-            src='https://mc.yandex.ru/watch/97941467'
-            style={{ position: 'absolute', left: '-9999px' }}
-            alt=''
-          />
-        </div>
         <Suspense>
           <Metrika />
         </Suspense>

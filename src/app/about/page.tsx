@@ -12,6 +12,7 @@ import kgeuLogo from '../../../public/education/kgeu.png'
 import graduation from '../../../public/gallery/graduation.jpg'
 import meAfterGame from '../../../public/gallery/me-after-game.jpg'
 import onQuay from '../../../public/gallery/on-quay.jpg'
+import buroLogo from '../../../public/work/buro1440.png'
 import mageinnLogo from '../../../public/work/mageinn.png'
 
 export const metadata: Metadata = {
@@ -140,9 +141,16 @@ const workplaces = [
   {
     title: 'Full Stack Engineer',
     company: 'Mageinn',
-    time: '2021 -',
+    time: '2023 - 2024',
     imageSrc: mageinnLogo,
     link: 'https://mageinn.com/'
+  },
+  {
+    title: 'Front-end Engineer',
+    company: 'Bureau 1440',
+    time: '2021 - 2023',
+    imageSrc: buroLogo,
+    link: 'https://1440.space/'
   }
 ]
 
