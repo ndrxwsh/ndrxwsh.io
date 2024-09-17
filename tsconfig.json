@@ -22,12 +22,12 @@
     }
   },
   "include": [
+    "global.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/hooks/useMousePosition.ts",
-    "src/app/metrika.js"
+    "src/hooks/useMousePosition.ts"
   ],
   "exclude": ["node_modules"]
 }

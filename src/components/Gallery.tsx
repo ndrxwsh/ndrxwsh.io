@@ -1,10 +1,5 @@
 'use client'
 
-import graduation from '../../public/gallery/graduation.jpg'
-import meAfterGame from '../../public/gallery/me-after-game.jpg'
-import meWithDan from '../../public/gallery/me-with-dan.jpg'
-import onQuay from '../../public/gallery/on-quay.jpg'
-
 import Photo from './Photo'
 
 export default function Gallery() {
@@ -12,7 +7,7 @@ export default function Gallery() {
     <>
       <section className='relative flex h-[268px] gap-4'>
         <Photo
-          src={meAfterGame}
+          src={'/gallery/me-after-game.jpg'}
           meta='2022-03-21'
           alt='me'
           width={350}
@@ -22,7 +17,7 @@ export default function Gallery() {
           index={1}
         />
         <Photo
-          src={graduation}
+          src={'/gallery/graduation.jpg'}
           meta='2019-06-29'
           alt='me'
           width={240}
@@ -33,7 +28,7 @@ export default function Gallery() {
           flipDirection='left'
         />
         <Photo
-          src={meWithDan}
+          src={'/gallery/me-with-dan.jpg'}
           meta='2024-03-05'
           alt='me'
           width={324}
@@ -43,7 +38,7 @@ export default function Gallery() {
           index={4}
         />
         <Photo
-          src={onQuay}
+          src={'/gallery/on-quay.jpg'}
           meta='2021-05-20'
           alt='me'
           width={250}

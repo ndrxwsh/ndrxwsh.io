@@ -1,10 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
+import { constructMetadata } from '~/lib/utils'
+
+export const metadata: Metadata = constructMetadata({
   title: '404 | ndrxwsh',
   description: 'Uh oh! This page does not exist'
-}
+})
 
 export default function NotFoundPage() {
   return (

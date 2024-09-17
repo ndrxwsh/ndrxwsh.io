@@ -1,0 +1,57 @@
+{
+  "home": {
+    "title": "hey, Andrew here",
+    "description": "hi there, I'm a software engineer who builds for the web with a design-oriented approach.",
+    "links": {
+      "tg": "tg",
+      "ig": "ig",
+      "gh": "github"
+    }
+  },
+  "nav": {
+    "about": "about",
+    "gear": "gear",
+    "blog": "blog"
+  },
+  "about": {
+    "title": "about",
+    "subtitle": "a glimpse into me",
+    "description1": "Hi, I'm Andrew, born in Novosibirsk, Russia, and I moved to Kazan for my studies. I used to be a professional hockey player. I have been coding for {years} years. As a software engineer, I specialize in full-stack web development.",
+    "description2": "When I'm not at my desk, I am probably lifting weights, playing soccer or hockey, filming something interesting.",
+    "connect": {
+      "title": "connect",
+      "links": {
+        "tg": "telegram",
+        "ig": "instagram",
+        "gh": "github",
+        "x": "x",
+        "linkedin": "linkedin"
+      }
+    },
+    "work": {
+      "title": "work",
+      "description": "I specialize in React, web development, UI/UX. But I am always learning new things. Here are some of the places I have worked.",
+      "front": "front-end engineer",
+      "full": "full-stack engineer",
+      "student": "bachelor student",
+      "companies": {
+        "mageinn": "mageinn",
+        "bureau": "bureau 1440",
+        "kgeu": "KSPEU"
+      }
+    },
+    "education": {
+      "title": "education",
+      "description": "I am currently pursuing a Bachelor's degree in Information Technology and Computer Science. My goal is to continue my education and personal development in this field, constantly striving to enhance my skills and knowledge."
+    }
+  },
+  "gear": {
+    "get": "get",
+    "title": "gear",
+    "subtitle": "my toolbox",
+    "description": "this is all gear I actually own and like. Updated on June 2024",
+    "everyday": "everyday carry",
+    "home": "home desl setup",
+    "other": "other"
+  }
+}

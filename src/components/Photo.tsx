@@ -6,11 +6,6 @@ import { ReactNode } from 'react'
 
 import { Card } from './ui'
 
-const ticketingFont = localFont({
-  src: '../../public/fonts/ticketing.woff2',
-  display: 'swap'
-})
-
 interface PhotoProps {
   src: StaticImageData | string
   meta?: ReactNode
@@ -104,9 +99,9 @@ export default function Photo({
           }}
         >
           <Card strength={50} className='flex items-center'>
-            <span className="absolute h-[500px] w-[500px] rotate-[-20deg] bg-[url('/photopaper.png')] bg-[length:280px] bg-repeat" />
+            <span className="absolute z-10 h-[500px] w-[500px] rotate-[-20deg] bg-[url('/photopaper.png')] bg-[length:280px] bg-repeat" />
             <div className='z-[1] px-6'>
-              <div className={clsx(ticketingFont.className, 'flex flex-col gap-1 uppercase')}>
+              <div className='flex flex-col gap-1 uppercase'>
                 <p className='text-secondary'>{fileName}</p>
                 {meta && <p className='text-sm text-secondary'>{meta}</p>}
               </div>

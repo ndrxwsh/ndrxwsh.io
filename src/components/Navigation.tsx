@@ -3,24 +3,28 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/20/solid'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { Fragment } from 'react'
 
+import { LangSwitcher } from './LangSwitcher'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { NavLink } from './ui'
 
-const links = [
-  { label: 'About', href: '/about' },
-  // { label: 'Blog', href: '/blog' },
-  { label: 'Gear', href: '/gear' }
+const links: { label: 'about' | 'blog' | 'gear'; href: string }[] = [
+  { label: 'about', href: '/about' },
+  { label: 'blog', href: '/blog' },
+  { label: 'gear', href: '/gear' }
 ]
 
 export const Navigation = () => {
   const pathname = `/${usePathname().split('/')[1]}`
 
   const router = useRouter()
+
+  const t = useTranslations('nav')
 
   const handleNavigate = (href: string) => {
     router.push(href)
@@ -42,12 +46,13 @@ export const Navigation = () => {
         <ul className='hidden items-center gap-1 md:flex'>
           {links.map(link => (
             <li key={link.href}>
-              <NavLink href={link.href}>{link.label}</NavLink>
+              <NavLink href={link.href}>{t(link.label)}</NavLink>
             </li>
           ))}
         </ul>
-        <div className='ml-auto flex h-8 w-8 items-center justify-center md:ml-0'>
+        <div className='ml-auto mr-3 flex h-8 w-8 items-center justify-center md:ml-0 md:mr-0'>
           <ThemeSwitcher />
+          <LangSwitcher />
         </div>
         <Popover className='relative md:hidden'>
           <PopoverButton className='flex h-8 w-8 items-center justify-center rounded-lg text-secondary'>
@@ -73,7 +78,7 @@ export const Navigation = () => {
                       pathname === link.href ? 'bg-secondary font-medium' : 'font-normal'
                     )}
                   >
-                    {link.label}
+                    {t(link.label)}
                   </CloseButton>
                 ))}
               </div>

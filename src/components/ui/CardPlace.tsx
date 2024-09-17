@@ -1,31 +1,27 @@
 'use client'
 
-import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 export interface CardPlaceProps {
-  title: string
-  company: string
+  title: 'student' | 'front' | 'full'
+  company: 'mageinn' | 'bureau' | 'kgeu'
   imageSrc: string | StaticImageData
   time?: string
   link?: string
 }
 
 export const CardPlace = ({ title, company, imageSrc, time, link }: CardPlaceProps) => {
+  const tWork = useTranslations('about.work.companies')
+  const tSpec = useTranslations('about.work')
   const content = (
     <>
       <div className='flex items-center gap-4'>
-        <Image
-          src={imageSrc}
-          alt={company}
-          width={48}
-          height={48}
-          className={clsx('rounded-full', company === 'University of Houston' && 'bg-neutral-50')}
-        />
+        <Image src={imageSrc} alt={company} width={48} height={48} className='rounded-full' />
         <div className='flex flex-col gap-px'>
-          <p className={link ? 'external-arrow' : ''}>{title}</p>
-          <p className='text-secondary'>{company}</p>
+          <p className={link ? 'external-arrow' : ''}>{tSpec(title)}</p>
+          <p className='text-secondary'>{tWork(company)}</p>
         </div>
       </div>
       {time && <time className='text-secondary'>{time}</time>}

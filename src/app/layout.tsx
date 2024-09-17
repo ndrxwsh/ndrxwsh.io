@@ -1,44 +1,45 @@
 import clsx from 'clsx'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Image from 'next/image'
-import { ReactNode, Suspense } from 'react'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
+import { Montserrat } from 'next/font/google'
+import { ReactNode } from 'react'
 
 import { Navigation } from '~/components/Navigation'
 import { ThemeProvider } from '~/components/ThemeProvider'
 
+import { constructMetadata } from '~/lib/utils'
+
 import './globals.css'
-import { Metrika } from './metrika'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Montserrat({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'ndrxwsh',
-  description: 'Kazan-based Software Engineer.'
-}
+export const metadata: Metadata = constructMetadata()
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: ReactNode
 }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+
   return (
-    <html lang='en'>
+    <html lang={locale}>
       <body
         className={clsx(
           inter.className,
-          'width-full bg-white text-primary antialiased dark:bg-black'
+          'width-full bg-white text-primary antialiased dark:bg-primary'
         )}
       >
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          <Navigation />
-          <div className='mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20'>
-            {children}
-          </div>
-        </ThemeProvider>
-        <Suspense>
-          <Metrika />
-        </Suspense>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+            <Navigation />
+            <div className='mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20'>
+              {children}
+            </div>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
