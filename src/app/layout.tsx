@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
@@ -37,6 +38,7 @@ export default async function RootLayout({
             <Navigation />
             <div className='mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20'>
               {children}
+              <SpeedInsights />
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
